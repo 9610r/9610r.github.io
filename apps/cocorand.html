@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>CoC〇壱ガチャ</title>
+	<script>
+		var opt1 = 0;
+		var opt2 = 0;
+		var opt3 = 0;
+		var opt4 = 0;
+		window.onload = function(){
+			document.getElementById("choiceSelect").style.display = "none";
+		}
+		function  RandInt(max) {
+			return Math.floor(Math.random() * Math.floor(max));
+		}
+		function Menugacha() {
+		var sides = "";
+		var sauces = "";
+		var sauce = ["ポークカレー","ビーフカレー","ハッシュドビーフ"];
+		var side = ["ポテトフライ","チキンナゲット"]
+    var topic = ["チキンにこみ","フライドチキン","ロースカツ","チキンカツ","パリパリチキン","メンチカツ","ハンバーグ","豚しゃぶ","ソーセージ","チーズインバーグ","ビーフカツ","ヒレカツ",
+								"フィッシュフライ","あさり","エビあさり","イカ","エビにこみ","海の幸","エビカツ",
+								"なす","やさい","ほうれん草","トマトアスパラ",
+								"納豆","スクランブルエッグ","チーズ","クリームコロッケ","きのこ","オクラ山芋"];
+    //console.log(RandInt(12));
+
+			tastes = document.getElementsByName("taste");
+			arr = [];
+			htmlstr = "";
+			flag = false;
+			choiceck = document.getElementById("choiceSelect").style.display;  //調整モードを取得
+			//document.write(choiceck);
+
+			for (let i = 0; i < tastes.length; i++) {  // オプションを取得
+				if (tastes[i].checked) {
+				arr.push(tastes[i].value);  // arrに選択された配列tasteを挿入
+				}
+			}
+
+			// 好みのオプション有無
+			if (arr.indexOf("optsauce") >= 0) {
+				sauces = sauce[RandInt(3)]
+			} else {
+				sauces = "";
+			}
+			if (arr.indexOf("optside") >= 0) {
+				var sideval = side.length;
+				sides = side[RandInt(sideval)];
+			} else {
+				sides = "";
+			}
+
+			if (choiceck == "none") {  // 調整をオフにした時に調整を引き継がないようにリセット
+				sauces = "";
+				sides = "";
+			}
+
+			const valp = document.myform.selectInt;
+			// 値(数値)を取得
+			const num = valp.selectedIndex;
+			// 値(数値)から値(value値)を取得
+			const str = valp.options[num].value;
+
+			for (var i = 0; i < str; i++) {
+				htmlstr += topic[RandInt(topic.length)] + "<br>";
+			}
+			document.getElementById("message").innerHTML = sauces + "<br>" + htmlstr +"<br>"+ sides;
+		}
+
+		// なぜかstyleが適用されなかったので直接書いた
+		function hyoji(){
+			document.getElementById("choiceSelect").style.display = "block";
+		}
+		function hihyoji(){
+			document.getElementById("choiceSelect").style.display = "none";
+		}
+
+
+		// リセット処理
+		function clearFormAll() {
+			document.getElementById("message").innerHTML = "";
+		}
+	</script>
+</head>
+
+<body style="text-align:center">
+	<h2>CoC〇壱トッピングガチャ</h2>
+	<br>
+	<form name="myform">
+		<p>トッピング数：</p>
+		<select name="selectInt">
+			<option value="1">1品</option>
+			<option value="2">2品</option>
+			<option value="3">3品</option>
+			<option value="4">4品</option>
+		</select>
+		<br>
+		<label name="choiceMode">オプション：
+			<label><input type="radio" name="choiceMode" value="1" onclick="hyoji()">あり</label>
+			<label><input type="radio" name="choiceMode" value="0" checked="true" onclick="hihyoji()">なし</label>
+		</label>
+
+		<fieldset id="choiceSelect" class="passive">
+			<div class="card mx-auto border-primary mb-3" style="max-width: 18rem;">
+  				<div class="card-body">
+    			<h5 class="card-title">オプション</h5>
+    			<p class="card-text">
+						<form name="opt">
+						<p class="text-muted">デフォルトはすべてなしです</p>
+						<p><label><input type="checkbox" name="taste" value="optsauce">ベース</label></p>
+						<p><label><input type="checkbox" name="taste" value="optside">サイドメニュー追加</label></p>
+						</form>
+    			</p>
+  			</div>
+			</div>
+		</fieldset>
+
+		<button type="button" class="btn btn-primary" onclick="Menugacha()">決定</button>
+		<button type="button" class="btn btn-secondary" onclick="window.location.reload();">リセット</button>
+
+	<br>
+	<br>
+	<div class="card mx-auto" style="width: 18rem;text-align:center;">
+	<div class="card card-body bg-light">
+		<p id="message">
+    	<span class="text-muted">※決定を押すとここに結果が表示されます</span>
+		</p>
+  </div>
+</div>
+
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
