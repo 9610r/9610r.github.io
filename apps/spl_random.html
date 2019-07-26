@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>CoC〇壱ガチャ</title>
+	<script>
+		var opt1 = 0;
+		var opt2 = 0;
+		var opt3 = 0;
+		var opt4 = 0;
+		function  RandInt(max) {
+			return Math.floor(Math.random() * Math.floor(max));
+		}
+		function Menugacha() {
+    var topic = ["プロモデラーMG",".52ガロン",".52ガロンデコ",".96ガロン",".96ガロンデコ","プロモデラーRG","ジェットスイーパーカスタム","もみじシューター","ボトルガイザーフォイル","プライムシューターコラボ","ジェットスイーパー","スプラシューターベッチュー",
+		"シャープマーカーネオ","ボールドマーカーネオ","N-ZAP85","N-ZAP89","オクタシューター レプリカ","シャープマーカー","スプラシューター","わかばシューター","プライムシューター","ボールドマーカー",
+		"ボトルガイザー","スプラシューターコラボ","ホットブラスター","クラッシュブラスター","クラッシュブラスターネオ","ホットブラスターカスタム","ロングブラスターカスタム","ノヴァブラスター","ノヴァブラスターネオ","ロングブラスター","ラピッドブラスター","ラピッドブラスターデコ",
+		"Rブラスターエリート","Rブラスターエリートデコ","デュアルスイーパーカスタム","スパッタリー","スパッタリー・ヒュー","クアッドホッパーブラック","デュアルスイーパー","スプラマニューバーコラボ",
+		"ケルビン525","ケルビン525デコ","スプラマニューバーベッチュー","クアッドホッパーホワイト","スプラマニューバー","H3リールガン",
+		"H3リールガンD","L3リールガン","L3リールガンD","カーボンローラー","カーボンローラーデコ","ダイナモローラー","ヴァリアブルローラー","ヴァリアブルローラーフォイル","ダイナモローラーテスラ","スプラローラーベッチュー","スプラローラーコラボ","スプラローラー",
+		"パブロ","パブロ・ヒュー","ホクサイ","ホクサイ・ヒュー","14式竹筒銃・甲","14式竹筒銃・乙","スクイックリンα","リッター4Kカスタム","ソイチューバーカスタム","リッター4K","スプラチャージャーコラボ","ソイチューバー",
+		"スプラチャージャーベッチュー","スクイックリンβ","スプラチャージャー","オーバーフロッシャー","エクスプロッシャー","バケットスロッシャー","バケットスロッシャーデコ","スクリュースロッシャー","スクリュースロッシャーネオ","ヒッセン","ヒッセン・ヒュー","クーゲルシュライバー","ハイドラントカスタム","バレルスピナー","バレルスピナーデコ","ハイドラント",
+		"スプラスピナー","ノーチラス47","スプラスピナーコラボ","パラシェルターソレーラ","パラシェルター","キャンピングシェルター","キャンピングシェルターソレーラ","スパイガジェット","スパイガジェットソレーラ","プライムシューターベッチュー","ノヴァブラスターベッチュー","ダイナモローラーベッチュー","スクリュースロッシャーベッチュー","おちばシューター",
+		"ホクサイベッチュー","スパイガジェットベッチュー","L3リールガンベッチュー","エクスプロッシャーカスタム","クーゲルシュライバー・ヒュー","オーバーフロッシャーデコ","ノーチラス79",".52ガロンベッチュー","ラピッドブラスターベッチュー","スプラスピナーベッチュー","ケルビン525ベッチュー","スパッタリークリア",
+		"キャンピングシェルターカーモ","スクイックリンγ","パーマネントパブロ","バケットスロッシャーソーダ","バレルスピナーリミックス","14式竹筒銃・丙","ロングブラスターネクロ","N-ZAP83","プロモデラーPG","ボールドマーカー7","H３リールガンチェリー"];
+    //console.log(RandInt(12));
+
+			arr = [];
+			htmlstr = "";
+			const valp = document.myform.selectInt;
+			// 値(数値)を取得
+			const num = valp.selectedIndex;
+			// 値(数値)から値(value値)を取得
+			const str = valp.options[num].value;
+
+			for (var i = 0; i < str; i++) {
+				htmlstr += topic[RandInt(topic.length)] + "<br>";
+			}
+			document.getElementById("message").innerHTML = htmlstr;
+		}
+
+		// なぜかstyleが適用されなかったので直接書いた
+		function hyoji(){
+			document.getElementById("choiceSelect").style.display = "block";
+		}
+		function hihyoji(){
+			document.getElementById("choiceSelect").style.display = "none";
+		}
+
+
+		// リセット処理
+		function clearFormAll() {
+			document.getElementById("message").innerHTML = "";
+		}
+	</script>
+</head>
+
+<body style="text-align:center">
+	<br>
+	<h2>Splato0n ブキガチャ</h2>
+	<br>
+	<form name="myform">
+		<p>人数：</p>
+		<select name="selectInt">
+			<option value="1">1人</option>
+			<option value="2">2人</option>
+			<option value="3">3人</option>
+			<option value="4">4人</option>
+		</select>
+		<br>
+		<br>
+
+
+		<!--
+		<label name="choiceMode">オプション：
+			<label><input type="radio" name="choiceMode" value="1" onclick="hyoji()">あり</label>
+			<label><input type="radio" name="choiceMode" value="0" checked="true" onclick="hihyoji()">なし</label>
+		</label>
+
+		<fieldset id="choiceSelect" class="passive">
+			<div class="card mx-auto border-primary mb-3" style="max-width: 18rem;">
+  				<div class="card-body">
+    			<h5 class="card-title">オプション</h5>
+    			<p class="card-text">
+						<form name="opt">
+						<p class="text-muted">デフォルトはすべてなしです</p>
+						<p><label><input type="checkbox" name="taste" value="optsauce">ベース</label></p>
+						<p><label><input type="checkbox" name="taste" value="optside">サイドメニュー追加</label></p>
+						</form>
+    			</p>
+  			</div>
+			</div>
+		</fieldset>
+	-->
+
+		<button type="button" class="btn btn-primary" onclick="Menugacha()">決定</button>
+		<button type="button" class="btn btn-secondary" onclick="window.location.reload();">リセット</button>
+
+	<br>
+	<br>
+	<div class="card mx-auto" style="width: 18rem;text-align:center;">
+	<div class="card card-body bg-light">
+		<p id="message">
+    	<span class="text-muted">※決定を押すとここに結果が表示されます</span>
+		</p>
+  </div>
+</div>
+
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
