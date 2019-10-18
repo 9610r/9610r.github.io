@@ -31,9 +31,9 @@ function setTweetButton(text){
       document.getElementById("tweet-area"),
       {
         size: "large",
-        text: "今日は『"+text+"』をつかいます! ",
+        text: "今日は『"+text+"』をつかいます! https://jp8h.com/apps/splapp.html",
         hashtags: "今日のブキ", // ハッシュタグ
-        url: "https://jp8h.com/apps/splapp.html", // URL
+        url: None // URL
       }
         );
       }
