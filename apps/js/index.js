@@ -32,8 +32,8 @@ function setTweetButton(text){
       {
         size: "large",
         text: "今日は『"+text+"』をつかいます! ",
-        url: "https://jp8h.com/apps/splapp.html", // URL
         hashtags: "今日のブキ", // ハッシュタグ
+        url: "https://jp8h.com/apps/splapp.html", // URL
       }
         );
       }
