@@ -8,9 +8,32 @@ function CheckName(){
   var pability = document.getElementById("ability");
   var pErr = document.getElementById("pErr");
 
+
   if (result != -1) {
     pokemondata = typedata[pokename[result]];
     pokemonst = pokemonstate[pokename[result]];
+    var pokety = pokemondata.type;
+
+    if (pokety.match('/')) {
+      var type_arr = pokety.split('/');
+    }else {
+      var type_arr = [pokety, "なし"]
+    }
+    var type1 = typeChert[typedict[type_arr[0]]]
+    var type2 = typeChert[typedict[type_arr[1]]]
+
+    arrp = type1.map((n, i) => n * type2[i])
+
+    console.log(arrp);
+
+    //3つの引数を受け取ることが可能
+    /*
+    var typeFour = arrp.filter( function( index ) {
+      return index === 4;
+    })
+    console.log(typeFour);
+    */
+
     pname.innerHTML = pokename[result];
     ptype.innerHTML = pokemondata.type;
     pability.innerHTML = pokemondata.ability;
@@ -21,6 +44,12 @@ function CheckName(){
     TBL.rows[1].cells[4].innerText = pokemonst.D;
     TBL.rows[1].cells[5].innerText = pokemonst.S;
     pErr.innerHTML = "";
+    TBL2.rows[1].cells[0].innerText = Math.floor(Number(pokemonst.H) + 107);
+    TBL2.rows[1].cells[1].innerText = Math.floor((Number(pokemonst.A) + 52)*1.1);
+    TBL2.rows[1].cells[2].innerText = Math.floor((Number(pokemonst.B) + 52)*1.1);
+    TBL2.rows[1].cells[3].innerText = Math.floor((Number(pokemonst.C) + 52)*1.1);
+    TBL2.rows[1].cells[4].innerText = Math.floor((Number(pokemonst.D) + 52)*1.1);
+    TBL2.rows[1].cells[5].innerText = Math.floor((Number(pokemonst.S) + 52)*1.1);
     //console.log(pokemondata);
     //console.log(pokemonst);
   }
@@ -28,15 +57,4 @@ function CheckName(){
     //console.log("null")
     pErr.innerHTML = "見つかりませんでした";
     }
-  }
-
-
-function CheckType(){
-  //console.log(RandInt(12));
-    const valp = document.myform.selectInt;
-    buki = pokename[RandInt(pokename.length)];
-    document.getElementById("message").innerHTML = buki;
-    var target2 = document.getElementById("message").value;
-    console.log(buki);
-    setTweetButton(buki);
   }
