@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./links.html">
+            <a class="nav-link" href="#">
               <i class="fas fa-paperclip fa-fw"></i>
               LINKs
             </a>
@@ -97,29 +97,63 @@
     ==================================================================================
     -->
     <div style="margin:50px;">
-      <h4>Apps</h4>
+      <h4></h4>
 
 <!-- タブ部分 -->
 
-<div class="card border-primary bg-white">
+
 <div style="margin:20px;">
-・<a href= "https://taiga123.work/apps/splapp.html" >スプラトーンのランダムのやつ</a><br>
-・<a href= "https://taiga123.work/apps/pokemon/index.html" >ポケンモの種族値チェック</a>
-</div>
-</div>
+<nav>
+  <div class="nav nav-pills">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Skill</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">etc.</a>
+  </div>
+</nav>
 
+<div class="tab-content mt-3" id="nav-tabContent">
+  <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <p>
+    <img src="images/profile.jpg" class="card-img" align="left" hspace="10" style="max-width: 30%;">
+        <h4>　Profile</h4>
+        <ul class="list-group list-group-flush" style="max-width: 400px;">
+          <li class="list-group-item">Name: Taiga Nakajima（とら)</li>
+          <li class="list-group-item">From: 静岡県 浜松市</li>
+          <li class="list-group-item">University: SIST</li>
+          <li class="list-group-item">Birthday: 10/23</li>
+        </ul>
+      </p>
+  </div>
+  <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <table class="table table-bordered table-sm">
+      <tr class="table-secondary"><th>◇資格・試験◇</th><th>取得日</th></tr>
+      <tr><td>情報セキュリティマネジメント試験 合格</td><td>2018年5月</td></tr>
+      <tr><td>MTA セキュリティ基礎</td><td>2018年</td></tr>
+      <tr><td>剣道二段</td><td> </td></tr>
+      <tr><td>普通自動車第一種運転免許 取得</td><td>2018年12月</td></tr>
+    </table>
+    <ul class="list-group" style="max-width: 400px; style="margin:20px;"">
+      <li class="list-group-item border-primary list-group-item-primary">よくつかう！</li>
+      <li class="list-group-item border-primary"><i class="fab fa-python fa-fw"></i>Python /
+      <i class="fab fa-js-square fa-fw"></i>JavaScript / HTML /<i class="fab fa-java fa-fw"></i>Java
+      </li>
+    </ul>
+    <br>
+    <ul class="list-group" style="max-width: 400px;style="margin:20px;"">
+      <li class="list-group-item border-warning list-group-item-warning">つかったことある</li>
+      <li class="list-group-item border-warning">Ruby (rails) / C言語 </li>
+    </ul>
 
-<br><br>
-<h4>その他</h4>
-
-<!-- タブ部分 -->
-
-<div class="card border-primary bg-white">
-<div style="margin:20px;">
-・そのうち載せます！
-
-</div>
-</div>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <p>
+        大学に通いつつ何か作ってます。<br>本格的にプログラミング初めて1年半くらい。<br>たまにブログに作ったものの解説とか書いてます。
+        <br>高校時代剣道部の部長やってました
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
     <!-- Bootstrap JavaScript -->
