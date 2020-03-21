@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Kanit|Kosugi+Maru&display=swap');
+
+body {
+    font-family: 'Kosugi Maru';
+    color: #1F1F1F;
+    background-color: #f5f5f5;
+}
+
+h1 {
+  font-family: 'Anton';
+  font-size: 500%;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: 'Kanit';
+  font-size: 300%;
+  text-align: center;
+  color: #428bca;
+
+}
+
+.work_title {
+  color: #F68B1E;
+}
+
+.rate {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 16px;
+  font-size: 16px;
+}
+.rate:before, .rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '★★★★★';
+  display: inline-block;
+  height: 16px;
+  line-height: 16px;
+}
+.rate:before {
+  color: #ddd;
+}
+.rate:after {
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rate0:after {
+  width: 0;
+}
+
+.rate1:after {
+  width: 16px;
+}
+
+.rate1-5:after {
+  width: 24px;
+}
+
+.rate2:after {
+  width: 32px;
+}
+
+.rate2-5:after {
+  width: 40px;
+}
+
+.rate3:after {
+  width: 48px;
+}
+
+.rate3-5:after {
+  width: 56px;
+}
+
+.rate4:after {
+  width: 64px;
+}
+
+.rate4-5:after {
+  width: 72px;
+}
+
+.rate5:after {
+  width: 80px;
+}
+
+.wrap {
+  width: 80px;
+  margin: 0 auto;
+}
+
+
+
+a:link { color: #0066c0; }
+a:visited { color: #0066c0; }
+a:hover { color: #ffa500; }
+a:active { color: #ff8000; }
