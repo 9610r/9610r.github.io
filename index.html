@@ -19,34 +19,31 @@
 
     <!-- Custom styles for this template -->
     <link href="./dist/css/navbar.css" rel="stylesheet">
+    <link href="./dist/css/theme.css" rel="stylesheet">
+    <!-- ジャンボトロンの設定 -->
+    <style>
+    .jumbotron {
+      background-image: url("./images/back_img.jpg");
+      background-size: cover;
+      background-position: center 100%;
+    }
+    </style>
 
     <!-- Webアイコン -->
-    <script src="https://kit.fontawesome.com/6dfe635efd.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
 
 
   </head>
+
   <body>
     <header id="header" class="sticky-top">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="https://taiga123.work">物置</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarsExample01">
+    <nav class="navbar navbar-expand navbar-dark bg-dark" style="margin-bottom:0px;">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="https://taiga123.work">
               <i class="fas fa-home fa-fw"></i>
               TOP
               <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  data-toggle="modal" data-target="#exampleModal">
-              <i class="fa fa-pen-nib fa-rotate-135 fa-fw"></i>
-              BLOG
             </a>
           </li>
           <li class="nav-item">
@@ -60,68 +57,367 @@
               ABOUT
             </a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="./contact.html">
-              <i class="far fa-address-book fa-fw"></i>
-              CONTACT
-            </a>
-          </li>
-        -->
         </ul>
-      </div>
-
-    </nav>
+      </nav>
   </header>
 
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">※注意</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">はてなブログにジャンプします</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-				<button type="button" class="btn btn-primary" onclick="location.href='#'">ジャンプ</button>
-			</div>
-		</div>
-	</div>
-  </div>
+  <div class="jumbotron jumbotron-fluid" style="margin-top: 0;">
+      <div class="container">
+        <h1>Taiga Portfolio<br><br><br></h1>
+      </div>
+    </div>
     <!--
     本文
     ==================================================================================
     -->
-    <div style="margin:50px;">
-      <h4>Apps</h4>
+<div style="margin:50px;">
+  <div class="container">
+    <h2 class="text-center"><i class="fas fa-user"></i>Profile</h2>
+      <nav>
+        <div class="nav nav-pills">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">hobby</a>
+        </div>
+      </nav>
 
-<!-- タブ部分 -->
+      <div class="tab-content mt-3" id="nav-tabContent">
+        <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="card">
+              <div class="card-body">
+          <img src="images/prof.png" class="card-img" align="left" hspace="10" vspace="40" style="max-width: 20%;">
+              <h4>
+                　<i class="fas fa-address-card" style="color: #F68B1E;"></i>
+              自己紹介
+              </h4>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name: Taiga Nakajima（とら)</li>
+                <li class="list-group-item">Birthday: 1998年10月23日</li>
+                <li class="list-group-item">From: 静岡県 浜松市</li>
+                <li class="list-group-item">University: SIST 情報学部</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <table class="table table-bordered table-sm">
+            <tr class="table-secondary"><th>◇資格・試験◇</th><th>取得日</th></tr>
+            <tr><td>情報セキュリティマネジメント試験 合格</td><td>2018年5月</td></tr>
+            <tr><td>MTA セキュリティ基礎</td><td>2018年</td></tr>
+            <tr><td>剣道二段</td><td> </td></tr>
+            <tr><td>普通自動車第一種運転免許 取得</td><td>2018年12月</td></tr>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="card">
+              <div class="card-body">
+                <img src="images/profile.jpg" class="card-img" align="left" hspace="5" vspace="40" style="max-width: 20%;">
+                <div class="container">
+                <p class="card-text">
+                  <ul class="list-group list-group-flush">
+              大学に通いつつプログラミングでなにか作ってます。<br>
+              プログラミングは本格的に取り組み始めて1年半くらい。<br>
+              たまにブログに作ったものの解説とか書いてます。<br><br>
+              14年間、小学1年生の時から剣道をやっていました。<br>
+              高校時代は剣道部の部長でした！<br>
+              <br>
+              休日は釣り、サイクリング、読書(SF小説)、ゲームをします
+            </ul>
+              </p>
+            </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="card border-primary bg-white">
-<div style="margin:20px;">
-・<a href= "https://taiga123.work/apps/splapp.html" >スプラトーンのランダムのやつ</a><br>
-・<a href= "https://taiga123.work/apps/pokemon/index.html" >ポケンモの種族値チェック</a>
+      <hr>
+
+      <div class="container">
+        <h2 class="text-center"><i class="fas fa-bolt"></i>Skill </h2>
+        <div class="card">
+        <div class="card-body">
+          <div class="text-center">
+            <h5><u>Web系</u></h5>
+            サイトの作成や基本的なことは一通りできます。<br>
+            このサイトのCSSフレームワークはbootstrapを使っています。
+          </div>
+    <table class="table text-center">
+      <tr>
+        <th style="width:20%">言語</th>
+        <th style="width:10%">年数</th>
+        <th>スキル</th>
+        <th> </th>
+      </tr>
+    <tbody>
+      <tr>
+        <td>HTML</td>
+        <td>3年</td>
+        <td><span class="rate rate5"></span></td>
+        <td>個人サイトの構築でよく使います</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>3年</td>
+        <td><span class="rate rate5"></td>
+      </tr>
+      <tr>
+        <td>Javascript</td>
+        <td>2年</td>
+        <td><span class="rate rate4"></td>
+        <td>Webアプリケーションの動作でつかいます</td>
+        </tr>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+    <div class="text-center">
+    <h5><u>言語</u></h5>
+    PythonとJavaを使うことが多いです
+    </div>
+    <table class="table text-center">
+      <tr>
+        <th style="width:20%">言語</th>
+        <th style="width:10%">年数</th>
+        <th>スキル</th>
+        <th> </th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>Python</td>
+          <td>2年</td>
+          <td><span class="rate rate4"></span></td>
+          <td>botの作成やスクレイピングでつかっています</td>
+        </tr>
+        <tr>
+          <td>Java</td>
+          <td>1年</td>
+          <td><span class="rate rate3"></td>
+          <td></td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>半年</td>
+            <td><span class="rate rate2"></td>
+              <td>マイコン制御で利用</td>
+            </tr>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+        <div class="text-center">
+        <h5><u>ツール</u></h5>
+        OSはUbuntuやRedhatをサーバー運用で利用したことがあります。
+        </div>
+        <table class="table text-center">
+          <tr>
+            <th style="width:20%">言語</th>
+            <th style="width:10%">年数</th>
+            <th>スキル</th>
+            <th> </th>
+          </tr>
+          <tbody>
+            <tr>
+              <td>Windows</td>
+              <td>7年</td>
+              <td><span class="rate rate5"></span></td>
+              <td>普段利用しているOS</td>
+            </tr>
+            <tr>
+              <td>Ubuntu</td>
+              <td>3年</td>
+              <td><span class="rate rate4"></span></td>
+              <td>基本的なコマンド操作は可能</td>
+            </tr>
+            <tr>
+              <td>Git</td>
+              <td>2年</td>
+              <td><span class="rate rate4"></span></td>
+              <td>GithubやVPSサーバーのファイル管理に使用</td>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>1年</td>
+              <td><span class="rate rate3"></td>
+              <td></td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>1年</td>
+                <td><span class="rate rate2"></td>
+                  <td>最近はマイコン制御で利用</td>
+                </tr>
+              </tr>
+              </tbody>
+            </table>
+            <hr>
+              <div class="text-center">
+              <h5><u>資格</u></h5>
+              <!--
+              <tr><td>情報セキュリティマネジメント試験 合格</td><td>2018年5月</td></tr>
+              <tr><td>MTA セキュリティ基礎</td><td>2018年</td></tr>
+              <tr><td>剣道二段</td><td> </td></tr>
+              <tr><td>普通自動車第一種運転免許 取得</td><td>2018年12月</td></tr>-->
+              </div>
+              <table class="table text-center">
+                <tr>
+                  <th style="width:50%">資格</th>
+                  <th>取得年月</th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>情報セキュリティマネジメント</td>
+                    <td>2018年5月</td>
+                  </tr>
+                  <tr>
+                    <td>MTA セキュリティ基礎</td>
+                    <td>2018年</td>
+                  </tr>
+                    <tr>
+                      <td>表計算、ワープロ 準2級</td>
+                      <td>2018年</td>
+                    </tr>
+                    <tr>
+                      <td>普通自動車第一種運転免許 取得</td>
+                      <td>2018年12月</td>
+                    </tr>
+                    <tr>
+                      <td>全日本剣道連盟　二段</td>
+                      <td>2015年12月</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+      </div>
+
+      <hr>
+
+
+<!--
+    WORKタブ
+                -->
+<div class="container" >
+      <h2><i class="fas fa-lightbulb fa-fw"></i>Work</h2>
+
+<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="card border-secondary">
+  <div class="card-header bg-light" role="tab" id="headingOne">
+      <a class="text-body work_title" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+        Splatoon2のブキルーレット
+      </a>
+  </div><!-- /.card-header -->
+  <div id="collapseOne" class="collapse show" role="tabpanel" data-parent="#accordion">
+    <div class="card-body">
+      Splatoon2(Nintendo)に登場するブキをランダムに表示するwebアプリ<br>
+      ゲーム内でのブキ選択に迷ったときに使うように作成。Twitterでシェアできるボタンを設置しました。<br>
+      cssフレームワークにbootstrapを使っています。<br>
+      <a href= "https://taiga123.work/apps/splapp.html" >Webサイト</a> /
+      <a href= "https://github.com/9610r/9610r.github.io/tree/master/apps/spl_random" >
+        <u>ソースコード(Github)</u></a><br>
+        <footer class="blockquote-footer">
+        使用したもの:HTML/CSS/JavaScript /Git/GitHubPages
+      </footer>
+    </div><!-- /.card-body -->
+  </div><!-- /.collapse -->
+</div><!-- /.card -->
+<div class="card border-secondary">
+  <div class="card-header" role="tab" id="headingTwo">
+      <a class="text-body" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+        ポケモンの種族値チェッカー
+      </a>
+  </div><!-- /.card-header -->
+  <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+    <div class="card-body">
+      Nintendo ポケットモンスター ソード/シールドに登場するポケモン(400種類)のステータス情報をjsonファイルで管理して情報表示するアプリ。<br>
+      対戦でよく使われるLv.50時点でのステータスもデータから計算して表示する仕様にしました。<br>
+      <a href= "https://taiga123.work/apps/pokemon/index.html" >ポケンモの種族値チェッカー</a> /
+      <a href= "https://github.com/9610r/9610r.github.io/tree/master/apps/pokemon" >
+        <u>(SouceCode)</u></a><br>
+        <footer class="blockquote-footer">
+        使用したもの:HTML/CSS/JavaScript /Git/GitHubPages
+      </footer>
+    </div><!-- /.card-body -->
+  </div><!-- /.collapse -->
+</div><!-- /.card -->
+<div class="card border-secondary">
+    <div class="card-header bg-light" role="tab" id="headingThree">
+        <a class="text-body" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+          チャット読み上げbot(Discord)
+        </a>
+    </div><!-- /.card-header -->
+    <div id="collapseThree" class="collapse" role="tabpanel" data-parent="#accordion">
+      <div class="card-body">
+        ゲーム中にチャットを見るのが難しいことから、画面を見なくても読み上げてくれるbotを作成しました。<br>
+        Discord(チャットアプリ)のチャットに投稿された文章をOpenJtalkを介して読み上げます<br>
+        音声合成はローカル環境で実行でき、回数制限のない<a href= "http://open-jtalk.sp.nitech.ac.jp/" >OpenJtalk</a>を使用しました。<br>
+        <br>
+        <a href= "https://qiita.com/9610r/items/d04bd91d373d31d9c3f3" >Qiita</a> /
+        <a href= "https://github.com/9610r/Read_text_re" >
+          <u>ソースコード(Github)</u></a><br>
+          <footer class="blockquote-footer">
+          使用したもの:Python3.7/OpenJtalk/Discord
+        </footer>
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+  <div class="card border-secondary">
+    <div class="card-header" role="tab" id="headingFour">
+        <a class="text-body" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false">
+          ゲーム補助bot(Discord)
+        </a>
+    </div><!-- /.card-header -->
+    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        Herokuというレンタルサーバーで24時間動かしています<br>
+        ゲームのAPIからスケジュールを出したり、上にあるブキルーレット,種族値チェッカーなどをコマンドにして登録してある便利系botです。<br>
+        上記の機能とかぶるところは多いですが言語が違うため、Pythonで書き直しています。<br>
+        2018年10月から運用していて現在32サーバーで利用されています。<br>
+        <a href= "https://ikayome.hateblo.jp/entry/splatoonbot" >紹介ページ</a>
+          <footer class="blockquote-footer">
+          使用したもの:Python3.7/Discord/heroku/Git
+        </footer>
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+
+  <div class="card border-secondary">
+    <div class="card-header" role="tab" id="headingFive">
+        <a class="text-body" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="false">
+          その他
+        </a>
+    </div>
+    <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        細かいものはブログにて紹介しております。<br>
+        <a href= "https://ikayome.hateblo.jp/archive/category/PROGRAM" >はてなブログ</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<hr>
+
+<div class="container">
+<h2><i class="fas fa-link fa-fw"></i></i>Link</h2>
+  <div class="card border-primary">
+    <div style="margin:20px;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          ・<a href= "https://qiita.com/9610r" >Qiita</a>
+        </li>
+        <li class="list-group-item">
+          ・<a href= "https://github.com/9610r" >GitHub</a>
+        </li>
+      </ul>
+    </div>
 </div>
 </div>
-
-
-<br><br>
-<h4>その他</h4>
-
-<!-- タブ部分 -->
-
-<div class="card border-primary bg-white">
-<div style="margin:20px;">
-・そのうち載せます！
-
 </div>
-</div>
-</div>
-
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="./dist/js/popper.min.js"></script>
