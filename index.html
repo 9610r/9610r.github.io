@@ -36,19 +36,6 @@
   </head>
 
   <body>
-    <header id="header" class="sticky-top">
-    <nav class="navbar navbar-expand navbar-dark bg-dark" style="margin-bottom:0px;">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="https://taiga123.work">
-              <i class="fas fa-home fa-fw"></i>
-              TOP
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-  </header>
 
 
   <div class="jumbotron jumbotron-fluid" style="margin-top: 0;">
@@ -66,7 +53,7 @@
       <nav>
         <div class="nav nav-pills">
           <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
-          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">hobby</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">etc.</a>
         </div>
       </nav>
 
@@ -74,16 +61,16 @@
         <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <div class="card">
               <div class="card-body">
-          <img src="images/prof.png" class="card-img" align="left" hspace="10" vspace="40" style="max-width: 20%;">
+          <img src="images/profile.jpg" class="card-img" align="left" hspace="10" vspace="40" style="max-width: 20%;">
               <h4>
                 　<i class="fas fa-address-card" style="color: #F68B1E;"></i>
               自己紹介
               </h4>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Name: Taiga Nakajima（とら)</li>
-                <li class="list-group-item">Birthday: 1998年10月23日</li>
-                <li class="list-group-item">From: 静岡県 浜松市</li>
-                <li class="list-group-item">University: SIST 情報学部</li>
+                <li class="list-group-item">Name:       中島 大雅</li>
+                <li class="list-group-item">Birthday:   1998年10月23日</li>
+                <li class="list-group-item">From:       静岡県 浜松市</li>
+                <li class="list-group-item">University: 静岡理工科大学 情報学部</li>
               </ul>
             </div>
           </div>
@@ -96,13 +83,13 @@
                 <div class="container">
                 <p class="card-text">
                   <ul class="list-group list-group-flush">
-              大学に通いつつプログラミングでなにか作ってます。<br>
-              プログラミングは本格的に取り組み始めて1年半くらい。<br>
+              大学に通いつつプログラミングでいろいろ作っています<br>
+              プログラミングは本格的に取り組み始めて1年半くらいですが、<br>
               たまにブログに作ったものの解説とか書いてます。<br><br>
               14年間、小学1年生の時から剣道をやっていました。<br>
-              高校時代は剣道部の部長でした！<br>
+              高校時代は剣道部の部長を1年間努めました<br>
               <br>
-              休日は釣り、サイクリング、読書(SF小説)、ゲームをします
+              休日は趣味の釣り、サイクリング、読書、ゲームをすることが多いです。
             </ul>
               </p>
             </div>
@@ -284,13 +271,26 @@
       <h2><i class="fas fa-lightbulb fa-fw"></i>Work</h2>
 
 <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card border-secondary">
+    <div class="card-header" role="tab" id="headingZero">
+        <a class="text-body" data-toggle="collapse" href="#collapseZero" role="button" aria-expanded="false">
+          ポートフォリオサイト
+        </a>
+    </div>
+    <div id="collapseZero" class="collapse show" role="tabpanel" aria-labelledby="headingZero" data-parent="#accordion">
+      <div class="card-body">
+        このサイトです。<br>
+        <a href= "https://ikayome.hateblo.jp/archive/category/PROGRAM" >はてなブログ</a>
+      </div>
+    </div>
+  </div>
 <div class="card border-secondary">
   <div class="card-header bg-light" role="tab" id="headingOne">
       <a class="text-body work_title" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
         Splatoon2のブキルーレット
       </a>
   </div><!-- /.card-header -->
-  <div id="collapseOne" class="collapse show" role="tabpanel" data-parent="#accordion">
+  <div id="collapseOne" class="collapse" role="tabpanel" data-parent="#accordion">
     <div class="card-body">
       Splatoon2(Nintendo)に登場するブキをランダムに表示するwebアプリ<br>
       ゲーム内でのブキ選択に迷ったときに使うように作成。Twitterでシェアできるボタンを設置しました。<br>
@@ -363,20 +363,6 @@
       </div><!-- /.card-body -->
     </div><!-- /.collapse -->
   </div><!-- /.card -->
-
-  <div class="card border-secondary">
-    <div class="card-header" role="tab" id="headingFive">
-        <a class="text-body" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="false">
-          その他
-        </a>
-    </div>
-    <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
-      <div class="card-body">
-        細かいものはブログにて紹介しております。<br>
-        <a href= "https://ikayome.hateblo.jp/archive/category/PROGRAM" >はてなブログ</a>
-      </div>
-    </div>
-  </div>
   </div>
 
 
